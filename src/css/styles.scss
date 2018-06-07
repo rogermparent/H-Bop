@@ -1,0 +1,81 @@
+@import "../../node_modules/bulma/bulma.sass";
+// @import "../../node_modules/bulma/sass/utilities/_all.sass";
+// @import "../../node_modules/bulma/sass/base/_all.sass";
+// @import "../../node_modules/bulma/sass/elements/content.sass";
+
+html, body {
+    min-height: 100%;
+    min-height: 100vh;
+    overflow: auto;
+}
+
+body {
+    display: flex;
+    text-align: center;
+    flex-flow: column nowrap;
+    >* {
+        padding: 0.5em;
+    }
+
+    >header, >footer {
+        background-color: $light;
+    }
+
+    >header {
+        border-top: var(--border-width) solid var(--accent);
+
+        @include tablet {
+            display: flex;
+            flex-flow: row nowrap;
+            padding: 0.5em;
+        }
+    }
+    /*coloured borders at top and bottom of the page*/
+    >footer {
+        border-bottom: var(--border-width) solid var(--accent);
+    }
+
+    >main {
+        flex: 1 0 auto;
+        background-color: $white;
+    }
+}
+
+nav {
+    margin: 0 1em;
+    a {
+        display: inline-block;
+        padding: 0.25em;
+    }
+
+    @include tablet {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        flex: 1;
+        font-size: 1.2em;
+    }
+}
+
+.logo {
+    font-size: 1.8em;
+    font-weight: bolder;
+}
+
+.fullwidth-hero {
+    @extend .is-flex;
+    width: 100%;
+    height: 100%;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    main {
+        flex: 1;
+        display:flex;
+        @extend .is-flex;
+        @extend .column;
+    }
+}

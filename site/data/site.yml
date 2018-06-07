@@ -1,0 +1,8 @@
+title: My Awesome Website
+description: "This the is SEO description."
+logo: My **Awesome** Website
+nav:
+  - label: Home
+    url: /
+  - label: About
+    url: /about/
